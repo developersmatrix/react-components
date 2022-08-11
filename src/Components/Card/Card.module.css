@@ -1,6 +1,21 @@
-.card {
+.container {
+  margin: 4rem auto;
   max-width: 1000px;
-  margin: 0.5rem auto;
-  border: 1px solid black;
-  padding: 0.5rem;
+  border: 1px solid aquamarine;
+  border-radius: 1rem;
+  padding: 2rem;
+  align-self: center;
+  box-shadow: 0px 0px 3px 0px aquamarine;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 80rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    max-width: 70rem;
+  }
 }

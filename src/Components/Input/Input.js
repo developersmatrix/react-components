@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import { validate } from "../../Shared/Util/validators";
 import styles from "./Input.module.css";
 
@@ -40,6 +40,13 @@ const Input = (props) => {
       type: "TOUCH",
     });
   };
+
+  const { id, onInput } = props;
+  const { value, isValid } = inputState;
+
+  useEffect(() => {
+    onInput(id, value, isValid);
+  }, [id, onInput, value, isValid]);
 
   const element =
     props.element === "input" ? (
