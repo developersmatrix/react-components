@@ -18,3 +18,9 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+.input-out input,
+.input-out textarea {
+  padding: 0.7rem 2rem;
+  border-radius: 10rem;
+}

@@ -32,6 +32,7 @@ const Form = () => {
       <h2 className={styles["form-heading"]}>Reuseable Input Component</h2>
       <div className={styles["input-container"]}>
         <Input
+          className={styles["input-out"]}
           type="number"
           id="title"
           label="title"
@@ -41,6 +42,7 @@ const Form = () => {
           onInput={inputHandler}
         />
         <Input
+          // className={styles["input-out"]}
           id="desc"
           label="Desc"
           element="textarea"
