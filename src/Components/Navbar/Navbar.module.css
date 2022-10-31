@@ -1,5 +1,17 @@
 .header {
-  padding: 0 4rem;
+  background-color: #131b25;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3.2rem;
+  gap: 2rem;
+
+  position: fixed;
+  top: 0;
+  height: 6.4rem;
+  width: 100%;
+  border-bottom: 2px solid aquamarine;
+  overflow-y: none;
 }
 
 .brand-link:link,
@@ -8,8 +20,9 @@
 
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: #ddd;
+  font-weight: 700;
 }
 
 .brand-link:hover,
@@ -24,14 +37,14 @@
 }
 
 .main-nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   height: 100vh;
   left: 0;
   right: 0;
-  background-color: #1e2526;
+  background-color: #131b25;
 
-  /* transform: translateX(100%); */
+  transform: translateX(100%);
   opacity: 1;
   transition: all 350ms ease-in-out;
 }
@@ -67,6 +80,7 @@
 
 .nav-link:hover {
   color: aquamarine;
+  background: rgba(37, 29, 19, 0.1);
 }
 
 /* ************* */

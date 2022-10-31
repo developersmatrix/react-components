@@ -1,32 +1,68 @@
-import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const [navBarToggled, setNavBarToggled] = useState(false);
+
+  const toggleNavbar = () => {
+    setNavBarToggled((prevState) => {
+      return !prevState;
+    });
+  };
   return (
     <header className={styles.header}>
       <div>
-        <a className={styles["brand-link"]}>TMC Virajpet</a>
+        <Link className={styles["brand-link"]} to="/">
+          TMC Virajpet
+        </Link>
       </div>
-      <nav className={styles["main-nav"]}>
+      <nav
+        className={
+          navBarToggled
+            ? `${styles["main-nav"]} ${styles["toggle-nav"]}`
+            : styles["main-nav"]
+        }
+      >
         <ul className={styles["nav-list"]}>
           <li className={styles["nav-list__item"]}>
-            <a className={styles["nav-link"]}>Dashboard</a>
+            <Link className={styles["nav-link"]} to="/as">
+              Dashboard
+            </Link>
           </li>
           <li className={styles["nav-list__item"]}>
-            <a className={styles["nav-link"]}>Revenue Assets</a>
+            <Link className={styles["nav-link"]} to="/revenue-assets">
+              Revenue Assets
+            </Link>
           </li>
           <li className={styles["nav-list__item"]}>
-            <a className={styles["nav-link"]}> Collection</a>
+            <Link className={styles["nav-link"]} to="/collection">
+              Collection
+            </Link>
           </li>
           <li className={styles["nav-list__item"]}>
-            <a className={styles["nav-link"]}>Schemes and works</a>
+            <Link className={styles["nav-link"]} to="/schemes-and-works">
+              Schemes and works
+            </Link>
           </li>
           <li className={styles["nav-list__item"]}>
-            <a className={styles["nav-link"]}>Misc</a>
+            <Link className={styles["nav-link"]} to="/misc">
+              Misc
+            </Link>
           </li>
         </ul>
       </nav>
+      <div
+        className={
+          navBarToggled
+            ? `${styles["nav-toggle"]} ${styles["toggle-ham"]}`
+            : styles["nav-toggle"]
+        }
+        onClick={toggleNavbar}
+      >
+        <div className={styles["hamburger"]}></div>
+      </div>
     </header>
   );
 };
