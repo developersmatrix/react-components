@@ -20,7 +20,7 @@ function App() {
             }
           ></Route>
           <Route
-            path="/collection"
+            path="/misc"
             element={
               <Card>
                 <Form />

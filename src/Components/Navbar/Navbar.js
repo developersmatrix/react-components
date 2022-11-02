@@ -27,27 +27,47 @@ const Navbar = () => {
       >
         <ul className={styles["nav-list"]}>
           <li className={styles["nav-list__item"]}>
-            <Link className={styles["nav-link"]} to="/as">
+            <Link
+              className={styles["nav-link"]}
+              to="/as"
+              onClick={toggleNavbar}
+            >
               Dashboard
             </Link>
           </li>
           <li className={styles["nav-list__item"]}>
-            <Link className={styles["nav-link"]} to="/revenue-assets">
+            <Link
+              className={styles["nav-link"]}
+              to="/revenue-assets"
+              onClick={toggleNavbar}
+            >
               Revenue Assets
             </Link>
           </li>
           <li className={styles["nav-list__item"]}>
-            <Link className={styles["nav-link"]} to="/collection">
+            <Link
+              className={styles["nav-link"]}
+              to="/collection"
+              onClick={toggleNavbar}
+            >
               Collection
             </Link>
           </li>
           <li className={styles["nav-list__item"]}>
-            <Link className={styles["nav-link"]} to="/schemes-and-works">
+            <Link
+              className={styles["nav-link"]}
+              to="/schemes-and-works"
+              onClick={toggleNavbar}
+            >
               Schemes and works
             </Link>
           </li>
           <li className={styles["nav-list__item"]}>
-            <Link className={styles["nav-link"]} to="/misc">
+            <Link
+              className={styles["nav-link"]}
+              to="/misc"
+              onClick={toggleNavbar}
+            >
               Misc
             </Link>
           </li>
